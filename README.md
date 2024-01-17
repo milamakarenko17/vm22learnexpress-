@@ -25,6 +25,28 @@
 - `.gitignore`
 - `__dirname +` - viitab sellele kataloogile,kus see asub
 - `Phoenixsnap.com` - veebikas.kus on elementaarsed seletused
+- `//` - kominteerib
+
+`npm i nodemon/npx nodemon`
+npx nodemon server.js - töötab
+
+`npm run start`
+ ## monitorib kõike faili
+
+`scripts`
+## start
+käivitada
+
+`npm i nunjucks` -
+const nunjucks = require('nunjucks');
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app
+});
+
+res.sendFile(__dirname + 'page2.html');
+
+npmjs.com
 
 res.send('Hello World!');
 res.sendFile('index.html');
