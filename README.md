@@ -22,3 +22,9 @@
 - `http://localhost:` - viitab serveri meie aadressile, kui hoijad ctrl all ja clicked
 - `ctrl c` - et väljuda localhostist
 - `console.log ('somebody visited');` - näitab, et keegi vaatas,silgudes kasutas
+- `.gitignore`
+- `__dirname +` - viitab sellele kataloogile,kus see asub
+- `Phoenixsnap.com` - veebikas.kus on elementaarsed seletused
+
+res.send('Hello World!');
+res.sendFile('index.html');
