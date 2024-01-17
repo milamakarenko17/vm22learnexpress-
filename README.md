@@ -1,13 +1,24 @@
 # vm22learnexpress
 
-´node server.js´
+`code .` 
+## avad vscode
 
-´cd´
+`npm init -y - create package.json`
 
-´git config --global - user.name/user.email´
+`npm install express / npm i - node_modules`
+## install
 
-´code . ´
+`node.server.js`
+## run
 
-´npm init -y - create package.json´
-
-´npm install express / npm i - node_modules´
+- `git clone 'link' foldri nimi` - cloneb seal foldris
+- `node server.js`
+- `cd`
+- `git config --global` - user.name/user.email
+-  express-gett.start-helloworld-copy-pane server.js
+- `markdown` -listid
+- `mv` -  rename file or catalog
+- `app.get` -registreerib code
+- `http://localhost:` - viitab serveri meie aadressile, kui hoijad ctrl all ja clicked
+- `ctrl c` - et väljuda localhostist
+- `console.log ('somebody visited');` - näitab, et keegi vaatas,silgudes kasutas
