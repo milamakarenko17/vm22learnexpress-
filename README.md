@@ -28,6 +28,12 @@
 - `//` - kominteerib
 - `{% block %}` -nimi -content 
 - `<input type="text"> `
+-`<br>` -
+
+
+<label for="fname">First name</label>
+          <input id="fname" type="text">
+      </label> 
 
 `npm i nodemon/npx nodemon`
 npx nodemon server.js - töötab

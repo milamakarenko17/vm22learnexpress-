@@ -3,7 +3,26 @@
 {% block content %}
    <h1>Form</h1>
    <form>
-    <label for="fname">First name</label>
-      <input id="fname" type="text"> 
+     <p>
+      <label>
+        First name<br>
+        <input type="text" placeholder="First Name" >
+       </label> 
+     </p>
+     <p>
+      <label>
+        Last name<br>
+        <input type="text" placeholder="Last Name" >
+      </label>  
+     </p>
+     <p>
+      <label>
+        Age<br>
+        <input type="number" placeholder="Age" >
+      </label>  
+     </p>
+     <p> 
+         <input type="submit" value="Send">
+     </p>
    <form>
 {% endblock %}
