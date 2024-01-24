@@ -18,6 +18,11 @@ app.get('/page2', (req, res) => {
     console.log ('somebody visited');
   });
 
+  app.get('/form', (req, res) => {
+    res.render('form.njk');
+    console.log ('somebody visited');
+  });
+
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
 });

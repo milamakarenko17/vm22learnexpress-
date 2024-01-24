@@ -26,7 +26,8 @@
 - `__dirname +` - viitab sellele kataloogile,kus see asub
 - `Phoenixsnap.com` - veebikas.kus on elementaarsed seletused
 - `//` - kominteerib
--{% block %} -nimi -content 
+- `{% block %}` -nimi -content 
+- `<input type="text"> `
 
 `npm i nodemon/npx nodemon`
 npx nodemon server.js - töötab
