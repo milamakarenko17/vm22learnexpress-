@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/page2', (req, res) => {
-    res.render('page2.html');
+    res.render('page2.njk');
     console.log ('somebody visited');
   });
 
