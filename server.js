@@ -10,17 +10,15 @@ nunjucks.configure('views', {
 
 app.get('/', (req, res) => {
   res.render('index.njk');
-  console.log ('somebody visited');
 });
 
 app.get('/page2', (req, res) => {
     res.render('page2.njk');
-    console.log ('somebody visited');
   });
 
   app.get('/form', (req, res) => {
-    res.render('form.njk');
-    console.log ('somebody visited');
+    console.log (req.query)
+    res.render('form.njk', req.query);
   });
 
 app.listen(port, () => {

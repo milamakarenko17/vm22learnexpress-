@@ -28,7 +28,8 @@
 - `//` - kominteerib
 - `{% block %}` -nimi -content 
 - `<input type="text"> `
--`<br>` -
+- `<br>` -
+- `step="0.1`
 
 
 <label for="fname">First name</label>

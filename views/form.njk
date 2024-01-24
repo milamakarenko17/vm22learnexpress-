@@ -2,23 +2,26 @@
 {% block tittle %}Form{% endblock %}
 {% block content %}
    <h1>Form</h1>
+   {% if fname and lname and age %}
+   <p>Hello {{ fname }} {{ lname }}! You are {{ age }} years old!</p>
+   {% endif %}
    <form>
      <p>
       <label>
         First name<br>
-        <input type="text" placeholder="First Name" >
+        <input type="text" placeholder="First Name" name="fname">
        </label> 
      </p>
      <p>
       <label>
         Last name<br>
-        <input type="text" placeholder="Last Name" >
+        <input type="text" placeholder="Last Name" name="fname">
       </label>  
      </p>
      <p>
       <label>
         Age<br>
-        <input type="number" placeholder="Age" >
+        <input type="number" min="0" max="150" step="0.1" placeholder="Age" >
       </label>  
      </p>
      <p> 
