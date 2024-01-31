@@ -30,7 +30,8 @@ app.get('/page2', (req, res) => {
   });
 
   app.post('/circle', (req, res) => {
-    res.json('req.body');
+    let area = Math.PI * req.body.radius * req.body.radius;
+    res.render('circleAnswer.njk', {r: req.body.radius, a: area});
   });
 
 app.listen(port, () => {
