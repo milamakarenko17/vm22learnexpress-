@@ -26,13 +26,18 @@ app.get('/page2', (req, res) => {
   });
 
   app.get('/circle', (req, res) => {
+    console.log(req.query);
     res.render('circle.njk');
   });
 
   app.post('/circle', (req, res) => {
     let area = Math.PI * req.body.radius * req.body.radius;
-    res.render('circleAnswer.njk', {r: req.body.radius, a: area});
-  });
+    let circumference = Math.PI * req.body.radius * 2;
+    let volume = Math.PI * req.body.radius * req.body.radius * req.body.radius * 4/3;
+    res.render('circleAnswer.njk', {r: req.body.radius, a: area, c: circumference, v: volume})
+});
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
