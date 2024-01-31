@@ -19,7 +19,7 @@
 - `markdown` -listid
 - `mv` -  rename file or catalog
 - `app.get` -registreerib code
-- `http://localhost:` - viitab serveri meie aadressile, kui hoijad ctrl all ja clicked
+- `http://localhost:` - viitab serveri meie aadressile, kui hoijad ctrl all ja clicked  - ctrl
 - `ctrl c` - et väljuda localhostist
 - `console.log ('somebody visited');` - näitab, et keegi vaatas,silgudes kasutas
 - `.gitignore`
@@ -30,6 +30,7 @@
 - `<input type="text"> `
 - `<br>` -
 - `step="0.1`
+- `res.json` -andmed andestama
 
 
 <label for="fname">First name</label>
