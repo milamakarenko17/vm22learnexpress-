@@ -37,8 +37,8 @@ app.get('/page2', (req, res) => {
     res.render('circleAnswer.njk', {r: req.body.radius, a: area, c: circumference, v: volume})
 });
 
-const movieController = require ('./src/movieController.js');
-app.use('./movies', movieController);
+const movieController = require('./src/movieController.js');
+app.use('/movies', movieController);
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
