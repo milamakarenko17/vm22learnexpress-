@@ -37,4 +37,15 @@ fs.writeFileSync('movies.json', json);
  res.redirect('/movies/');
  });
 
+ router.get('/view', (req, res) => {
+    let id = pareInt(req.query.id);
+    console.log(id);
+    let movies =fs.readFileSync('movies.json', 'utf-8');
+    movies = JSON.parse(movies);
+    let movie = movies.movies.find( m => m.id === id);
+    res.json(movie);
+    res.render('movies/view.njk', {movie:movie});
+    });
+
+
 module.exports = router;

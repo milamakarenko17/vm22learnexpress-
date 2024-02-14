@@ -15,6 +15,7 @@ table, th, td {
         <th>ID</th>
         <th>Name</th>
         <th>Year</th>
+        <th>Actions</th>
     </thead>
     <tbody>
         {% for movie in movies %}
@@ -23,6 +24,12 @@ table, th, td {
             <td> {{movie.name}} </td>
             <td> {{movie.year}} </td>
         </tr>
+        <td>
+         <a href="/movies/view?id={{movie.id}}">View</a>
+         <a href="/movies/view">Edit</a>
+         <a href="/movies/view">Delete</a>
+        </td>
+
         {%endfor%}
     </tbody>
 </table>
