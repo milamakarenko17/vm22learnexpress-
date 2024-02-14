@@ -1,0 +1,10 @@
+{% extends "partials/layout.njk"  %}
+{% block title %} Ass Movie {% endblock %}
+{% block content %}
+ <form acrion="movies/edit/{{movie.name}}" method="POST">
+    <input type="text" placeholder="Movie Name" name="movie" value="{{movie.name}}">
+    <input type="number" placeholder="Movie year" name="year" value="{{movie.year}}>
+    <textarea name="description" placeholder="Movie description">{{movie.description}}</textarea>
+    <input type="submit" value="Add" value="Update">
+ </form>
+{% endblock %}

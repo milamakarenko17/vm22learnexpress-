@@ -1,4 +1,3 @@
-module.exports = router;
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
@@ -38,14 +37,19 @@ fs.writeFileSync('movies.json', json);
  });
 
  router.get('/view', (req, res) => {
-    let id = pareInt(req.query.id);
-    console.log(id);
+    let id = parseInt(req.query.id);
     let movies =fs.readFileSync('movies.json', 'utf-8');
     movies = JSON.parse(movies);
     let movie = movies.movies.find( m => m.id === id);
-    res.json(movie);
     res.render('movies/view.njk', {movie:movie});
-    });
+});
 
+router.get('/edit/:id', (req, res) => {
+    let id = parseInt(req.params.id);
+    let movies =fs.readFileSync('movies.json', 'utf-8');
+    movies = JSON.parse(movies);
+    let movie = movies.movies.find( m => m.id === id);
+    res.render('movies/edit.njk', {movie:movie});
+});
 
 module.exports = router;

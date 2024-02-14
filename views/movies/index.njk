@@ -23,12 +23,13 @@ table, th, td {
              <td> {{movie.id}} </td>
             <td> {{movie.name}} </td>
             <td> {{movie.year}} </td>
+            <td>
+                <a href="/movies/view?id={{movie.id}}">View</a>
+                <a href="/movies/view/{{movie.id}}">Edit</a>
+                <a href="/movies/view">Delete</a>
+            </td>
         </tr>
-        <td>
-         <a href="/movies/view?id={{movie.id}}">View</a>
-         <a href="/movies/view">Edit</a>
-         <a href="/movies/view">Delete</a>
-        </td>
+        
 
         {%endfor%}
     </tbody>
