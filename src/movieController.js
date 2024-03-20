@@ -1,12 +1,32 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-const {Sequelize, QueryTypes} = require('sequelize');
+const {Sequelize, QueryTypes, DataTypes} = require('sequelize');
 let sequelize  = new Sequelize('sqlite:db.sqlite');
+
+const Movie = sequelize.define ('Movie' , {
+
+id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
+name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+ },
+year: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+},
+description: {
+    type: DataTypes.TEXT
+}
+}, { tableName: 'Movies', timestamps: false });
 
 router.get('/', async (req, res) => {
   
-  let movies = await sequelize.query('SELECT * FROM `movies`;', {type: QueryTypes.SELECT}) ;
+  let movies = await Movie.findAll();
   res.render('movies/index.njk', {movies: movies});
 });
 
@@ -15,10 +35,12 @@ router.get('/add', (req, res) => {
     });
 
  router.post('/add', async (req, res) => {
-    await sequelize.query (`INSERT INTO movies (name, year,description) 
-                          VALUES ('${req.body.movie}', ${req.body.year}, '${req.body.description}');`,
-            {type: QueryTypes.INSERT}) ;
-             res.redirect('/movies/');
+    await Movie.create ({
+        name: req.body.movie,
+        year:req.body.year, 
+        description: req.body.description
+    });
+    res.redirect('/movies/');
  });
 
  router.get('/view', async (req, res) => {
