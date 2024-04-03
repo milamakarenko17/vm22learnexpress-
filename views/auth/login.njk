@@ -1,11 +1,9 @@
 {% extends "partials/layout.njk"  %}
-{% block title %} Register {% endblock %}
+{% block title %} Login {% endblock %}
 {% block content %}
- <form acrion="/register" method="POST">
-    <input type="text" placeholder="Name" name="name">
+ <form acrion="/login" method="POST">
     <input type="email" placeholder="Email" name="email">
     <input type="password" placeholder="Password" name="password">
-    <input type="password" placeholder="Password Confirmation" name="password_confirm">
     <input type="submit" value="Register">
  </form>
 {% endblock %}
