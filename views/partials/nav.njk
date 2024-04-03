@@ -7,5 +7,10 @@
     {% if not user %}
        <li><a href="/register">Register</a></li>
        <li><a href="/login">Login</a></li>
-     {% endif %}
+    {% else %}
+       <li>{{user.name}}
+        <ul> 
+            <li><a href ="/logout">Logout</a></li>
+        </ul>  
+    {% endif %}
 </ul>
