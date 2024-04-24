@@ -28,4 +28,10 @@ table, th, td {
          </tr>
       <tbody>
    </table>
+   <div class="btn-group" >
+                    <a class="btn btn-info" href="/movies/id={{movie.id}}">ID</a>
+                    <a class="btn btn-warning" href="/movies/name/{{movie.name}}">Name</a>
+                    <a class="btn btn-danger"  href="/movies/year/{{movie.year}}">Year</a>
+                    <a class="btn btn-danger"  href="/movies/description/{{movie.description}}">Description</a>
+                </div>
 {% endblock %}
