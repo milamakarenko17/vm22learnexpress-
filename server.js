@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 const session = require('express-session');
-const FileStore = require('session-file-store         ')(session);
+const FileStore = require('session-file-store')(session);
 app.use(session({
   store: new FileStore(),
   secret:'secret',

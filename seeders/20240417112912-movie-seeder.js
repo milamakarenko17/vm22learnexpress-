@@ -12,7 +12,7 @@ module.exports = {
       name: faker.lorem.words({min: 1, max: 3 }),
       year: faker.number.int({min: 1888, max: 2024 }),
       description: faker.lorem.paragraphs(5),
-      userId: users[faker.number.int({max: users.lenght})].id
+      UserId: users[faker.number.int({max: users.lenght})].id
     });
   } 
 },
