@@ -1,19 +1,29 @@
+{% endblock %}
+
 {% extends "partials/layout.njk" %}
-{% block title %}Add movie{% endblock %}
+{% block title %} Add movie {% endblock %}
 {% block content %}
-  <form acrion="movies/edit/{{movie.id}}" method="POST">
-    <div class="mb-3">
-        <label for="movie" class="form-label">Movie Name</label>
-        <input id="movie" class="form-control" type="text" placeholder="Movie Name" name="movie" value="{{movie.name}}">
+
+  <form action="/movies/edit/{{movie.id}}" method="POST">
+
+   <div class="mb-3">
+     <label for="text" class="form-label">Movie name</label>
+    <input id="text" class="form-control" type="text" placeholder="Movie name" name="movie" value="{{movie.name}}">
+  </div>
+
+     <div class="mb-3">
+      <label for="year" class="form-label">Movie year</label>
+    <input id="year" class="form-control" type="number" placeholder="Movie year" name="year" value="{{movie.year}}">
     </div>
-    <div class="mb-3">
-        <label for="movie year" class="form-label">Movie year</label>
-        <input id="movie year" class="form-control" type="number" placeholder="Movie year" name="year" value="{{movie.year}}">
+
+     <div class="mb-3">
+      <label for="description" class="form-label">Movie description</label>
+    <textarea id="description" class="form-control" name="description" placeholder="Movie description">{{movie.description}}</textarea>
     </div>
-    <div class="mb-3">
-        <label for="description" class="form-label">Movie description</label>
-        <textarea id="description" class="form-control" name="description" placeholder="Movie description" value="{{movie.description}}">
-    </div>
-    <input class="btn btn-primary" type="submit" value="Add" value="Update">
+
+ <input id="text" class="btn btn-primary" type="submit" value="Update">
+   
   </form>
+
+
 {% endblock %}

@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
+const {Movie, User} = require ('./models/index.js');
 
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
@@ -29,10 +30,9 @@ app.use ((req, res, next) => {
   next();
 }); 
 
-app.get('/', (req, res) => {
-    console.log(req.session.user);
-    res.render('index.njk');
-
+app.get('/', async (req, res) => {
+    const movies = await Movie.findAll();
+    res.render('index.njk' , {movies});
   });
 
 app.get('/page2', (req, res) => {

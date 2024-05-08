@@ -36,7 +36,6 @@ router.post('/login', async (req, res) => {
         email: req.body.email
     }
  });
- console.log(user, bcrypt.compareSync(req.body.password, user.password ))
     if (!user || !bcrypt.compareSync(req.body.password, user.password )){
     res.redirect('/login');
   } 
