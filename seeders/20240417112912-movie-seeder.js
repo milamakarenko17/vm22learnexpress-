@@ -1,7 +1,6 @@
 'use strict';
 const {User, Movie} = require('../models/index.js');
 const { faker } = require('@faker-js/faker');
-const Movie = require('../src/models/Movie.js');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
@@ -12,7 +11,7 @@ module.exports = {
       name: faker.lorem.words({min: 1, max: 3 }),
       year: faker.number.int({min: 1888, max: 2024 }),
       description: faker.lorem.paragraphs(5),
-      UserId: users[faker.number.int({max: users.lenght})].id
+      UserId: users[faker.number.int({max: users.length-1})].id
     });
   } 
 },
