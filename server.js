@@ -7,6 +7,11 @@ const port = 3000;
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 const {Movie, User} = require ('./models/index.js');
+const fileUpload = require('express-fileupload');
+app.use(fileUpload());
+
+
+app.use(express.static('public'))
 
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
@@ -41,7 +46,7 @@ app.get('/', async (req, res) => {
   for(let i = 1; i<=3; i++){
     elements[i] = i;
   }
-  if(page > 1);{
+  if(page > 2);{
   elements.push('...');
 }
   for(let i = page-2; i<=page+2  && i<=pages && i>0; i++){

@@ -3,12 +3,12 @@
 {% block content %}
  <div class="row">
 
-{% include "partials/layout.njk" %}
+{% include "partials/pagination.njk" %}
 
    {% for movie in movies %}
      <div class ="col-3 h-100 mb-2">
       <div class="card">
-      {# <img src="..." class="card-img-top" alt="..."> #}
+       <img src="{{movie.image}}" class="card-img-top" alt="..."> 
      <div class="card-body">
         <h5 class="card-title">{{movie.name}}</h5>
         <p class="card-text">{{movie.snippet()}}...</p>
